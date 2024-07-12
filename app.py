@@ -8,6 +8,8 @@ from langchain.prompts.chat import (
     SystemMessagePromptTemplate
 )
 import os
+from audio_recorder_streamlit import audio_recorder
+from tempfile import NamedTemporaryFile
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 os.environ["OPENAI_API_KEY"] = st.secrets.OpenAIAPI.openai_api_key
