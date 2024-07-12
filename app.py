@@ -68,9 +68,10 @@ st.write("LangChainを使った翻訳アプリです。")
 options = ["日本語", "英語", "スペイン語", "ドイツ語", "フランス語", "中国語"]
 source_lang = st.selectbox(label="翻訳元", options=options)
 target_lang = st.selectbox(label="翻訳先", options=options)
-st.button("音声入力",type="primary",on_click=audio_input)
+
 st.text_input("翻訳する文章を入力してください。", key="user_input")
 st.button("翻訳", type="primary", on_click=communicate)
+st.button("音声入力",type="primary",on_click=audio_input)
 
 if st.session_state["user_input"] != "":
     st.write("翻訳結果:")
